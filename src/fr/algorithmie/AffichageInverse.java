@@ -1,5 +1,7 @@
 package fr.algorithmie;
 
+import java.util.Arrays;
+
 public class AffichageInverse {
 
 	public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class AffichageInverse {
 		}
 		System.out.println("*********************************************");
 
-//		Afficher l’ensemble des éléments dans l’ordre inverse du tableau 
+		// Afficher l’ensemble des éléments dans l’ordre inverse du tableau
 		for (int i = array.length - 1; i >= 0; i--) {
 			System.out.println(array[i]);
 		}
@@ -19,10 +21,8 @@ public class AffichageInverse {
 
 		// Créer un tableau arrayCopy et copier tous les éléments de array dans
 		// arrayCopy
-		int[] arrayCopy = new int[array.length];
-		for (int i = 0; i < array.length; i++) {
-			arrayCopy[i] = array[i];
-		}
+
+		int[] arrayCopy = Arrays.copyOf(array, array.length);
 		for (int i = 0; i < arrayCopy.length; i++) {
 			System.out.println(arrayCopy[i]);
 		}
